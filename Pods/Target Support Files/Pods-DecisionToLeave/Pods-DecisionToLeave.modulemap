@@ -1,0 +1,6 @@
+framework module Pods_DecisionToLeave {
+  umbrella header "Pods-DecisionToLeave-umbrella.h"
+
+  export *
+  module * { export * }
+}

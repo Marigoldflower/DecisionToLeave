@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RankingController.swift
 //  DecisionToLeave
 //
 //  Created by 황홍필 on 2024/01/19.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class RankingController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
+    
 }
-
