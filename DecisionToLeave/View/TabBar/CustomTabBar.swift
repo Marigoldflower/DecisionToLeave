@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol TabBarButton: AnyObject {
+    func makeTabBarButton() -> UIButton
+}
+
 final class CustomTabBar: UIView {
     
     // MARK: - UI Components
