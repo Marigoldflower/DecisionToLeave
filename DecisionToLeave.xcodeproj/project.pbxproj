@@ -19,14 +19,19 @@
 		EA52C4702B5A55EC0012F37B /* DecisionToLeaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C46F2B5A55EC0012F37B /* DecisionToLeaveTests.swift */; };
 		EA52C47A2B5A55EC0012F37B /* DecisionToLeaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4792B5A55EC0012F37B /* DecisionToLeaveUITests.swift */; };
 		EA52C47C2B5A55EC0012F37B /* DecisionToLeaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C47B2B5A55EC0012F37B /* DecisionToLeaveUITestsLaunchTests.swift */; };
-		EA52C4892B5A56120012F37B /* RankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4882B5A56120012F37B /* RankingController.swift */; };
+		EA52C4892B5A56120012F37B /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4882B5A56120012F37B /* SettingController.swift */; };
 		EA52C4902B5A565B0012F37B /* ViewDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C48F2B5A565B0012F37B /* ViewDrawable.swift */; };
-		EA52C4952B5A57A40012F37B /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4922B5A57A40012F37B /* LINESeedKR-Rg.otf */; };
 		EA52C4962B5A57A40012F37B /* LINESeedKR-Th.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4932B5A57A40012F37B /* LINESeedKR-Th.otf */; };
-		EA52C4972B5A57A40012F37B /* LINESeedKR-Th.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4942B5A57A40012F37B /* LINESeedKR-Th.ttf */; };
 		EA52C4992B5A586A0012F37B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4982B5A586A0012F37B /* Bindable.swift */; };
 		EA52C49B2B5A58880012F37B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C49A2B5A58880012F37B /* CustomTabBar.swift */; };
 		EA52C49D2B5A58F20012F37B /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C49C2B5A58F20012F37B /* MyColor.swift */; };
+		EA52C49F2B60D5D40012F37B /* CustomTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C49E2B60D5D40012F37B /* CustomTabBarViewModel.swift */; };
+		EA52C4A12B60E43D0012F37B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4A02B60E43D0012F37B /* MainTabBarController.swift */; };
+		EA52C4A42B61207D0012F37B /* DeviceSizeMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4A32B61207D0012F37B /* DeviceSizeMananger.swift */; };
+		EA52C4A82B613A6D0012F37B /* MyFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4A72B613A6D0012F37B /* MyFonts.swift */; };
+		EA52C4AC2B613C210012F37B /* LINESeedKR-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4A92B613C210012F37B /* LINESeedKR-Bd.otf */; };
+		EA52C4AD2B613C210012F37B /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */; };
+		EA52C4B22B621E050012F37B /* CreateDetoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B12B621E050012F37B /* CreateDetoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,14 +74,19 @@
 		EA52C4752B5A55EC0012F37B /* DecisionToLeaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisionToLeaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA52C4792B5A55EC0012F37B /* DecisionToLeaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionToLeaveUITests.swift; sourceTree = "<group>"; };
 		EA52C47B2B5A55EC0012F37B /* DecisionToLeaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionToLeaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EA52C4882B5A56120012F37B /* RankingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingController.swift; sourceTree = "<group>"; };
+		EA52C4882B5A56120012F37B /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		EA52C48F2B5A565B0012F37B /* ViewDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDrawable.swift; sourceTree = "<group>"; };
-		EA52C4922B5A57A40012F37B /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
 		EA52C4932B5A57A40012F37B /* LINESeedKR-Th.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Th.otf"; sourceTree = "<group>"; };
-		EA52C4942B5A57A40012F37B /* LINESeedKR-Th.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Th.ttf"; sourceTree = "<group>"; };
 		EA52C4982B5A586A0012F37B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		EA52C49A2B5A58880012F37B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		EA52C49C2B5A58F20012F37B /* MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		EA52C49E2B60D5D40012F37B /* CustomTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewModel.swift; sourceTree = "<group>"; };
+		EA52C4A02B60E43D0012F37B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EA52C4A32B61207D0012F37B /* DeviceSizeMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSizeMananger.swift; sourceTree = "<group>"; };
+		EA52C4A72B613A6D0012F37B /* MyFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFonts.swift; sourceTree = "<group>"; };
+		EA52C4A92B613C210012F37B /* LINESeedKR-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Bd.otf"; sourceTree = "<group>"; };
+		EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LINESeedKR-Rg.otf"; path = "../../../../../Downloads/LINE_SeedKR_2023.09.06/OTF/LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
+		EA52C4B12B621E050012F37B /* CreateDetoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDetoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				EA52C4912B5A577F0012F37B /* TabBar */,
-				EA52C45C2B5A55EA0012F37B /* DetoxController.swift */,
-				EA52C4882B5A56120012F37B /* RankingController.swift */,
+				EA52C4AF2B621DD40012F37B /* DetoxView */,
+				EA52C4B02B621DDD0012F37B /* SettingView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +210,7 @@
 		EA52C48B2B5A562F0012F37B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EA52C49E2B60D5D40012F37B /* CustomTabBarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -214,9 +225,9 @@
 		EA52C48D2B5A56470012F37B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EA52C4922B5A57A40012F37B /* LINESeedKR-Rg.otf */,
+				EA52C4A92B613C210012F37B /* LINESeedKR-Bd.otf */,
+				EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */,
 				EA52C4932B5A57A40012F37B /* LINESeedKR-Th.otf */,
-				EA52C4942B5A57A40012F37B /* LINESeedKR-Th.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -227,6 +238,8 @@
 				EA52C48F2B5A565B0012F37B /* ViewDrawable.swift */,
 				EA52C4982B5A586A0012F37B /* Bindable.swift */,
 				EA52C49C2B5A58F20012F37B /* MyColor.swift */,
+				EA52C4A32B61207D0012F37B /* DeviceSizeMananger.swift */,
+				EA52C4A72B613A6D0012F37B /* MyFonts.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -234,9 +247,27 @@
 		EA52C4912B5A577F0012F37B /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				EA52C4A02B60E43D0012F37B /* MainTabBarController.swift */,
 				EA52C49A2B5A58880012F37B /* CustomTabBar.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EA52C4AF2B621DD40012F37B /* DetoxView */ = {
+			isa = PBXGroup;
+			children = (
+				EA52C45C2B5A55EA0012F37B /* DetoxController.swift */,
+				EA52C4B12B621E050012F37B /* CreateDetoxView.swift */,
+			);
+			path = DetoxView;
+			sourceTree = "<group>";
+		};
+		EA52C4B02B621DDD0012F37B /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				EA52C4882B5A56120012F37B /* SettingController.swift */,
+			);
+			path = SettingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,10 +379,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA52C4972B5A57A40012F37B /* LINESeedKR-Th.ttf in Resources */,
-				EA52C4952B5A57A40012F37B /* LINESeedKR-Rg.otf in Resources */,
+				EA52C4AC2B613C210012F37B /* LINESeedKR-Bd.otf in Resources */,
 				EA52C4652B5A55EC0012F37B /* LaunchScreen.storyboard in Resources */,
 				EA52C4962B5A57A40012F37B /* LINESeedKR-Th.otf in Resources */,
+				EA52C4AD2B613C210012F37B /* LINESeedKR-Rg.otf in Resources */,
 				EA52C4622B5A55EC0012F37B /* Assets.xcassets in Resources */,
 				EA52C4602B5A55EA0012F37B /* Main.storyboard in Resources */,
 			);
@@ -481,11 +512,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA52C4892B5A56120012F37B /* RankingController.swift in Sources */,
+				EA52C4B22B621E050012F37B /* CreateDetoxView.swift in Sources */,
+				EA52C4892B5A56120012F37B /* SettingController.swift in Sources */,
+				EA52C4A42B61207D0012F37B /* DeviceSizeMananger.swift in Sources */,
 				EA52C4902B5A565B0012F37B /* ViewDrawable.swift in Sources */,
+				EA52C4A12B60E43D0012F37B /* MainTabBarController.swift in Sources */,
 				EA52C49B2B5A58880012F37B /* CustomTabBar.swift in Sources */,
 				EA52C4992B5A586A0012F37B /* Bindable.swift in Sources */,
 				EA52C45D2B5A55EA0012F37B /* DetoxController.swift in Sources */,
+				EA52C49F2B60D5D40012F37B /* CustomTabBarViewModel.swift in Sources */,
+				EA52C4A82B613A6D0012F37B /* MyFonts.swift in Sources */,
 				EA52C49D2B5A58F20012F37B /* MyColor.swift in Sources */,
 				EA52C4592B5A55EA0012F37B /* AppDelegate.swift in Sources */,
 				EA52C45B2B5A55EA0012F37B /* SceneDelegate.swift in Sources */,
@@ -674,6 +710,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -703,6 +740,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

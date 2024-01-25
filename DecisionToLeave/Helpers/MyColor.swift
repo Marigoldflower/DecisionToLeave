@@ -16,7 +16,7 @@ extension UIColor {
     static let decisionRed = UIColor(red: 0.90, green: 0.38, blue: 0.38, alpha: 1.00)
     static let decisionYellow = UIColor(red: 0.96, green: 0.81, blue: 0.45, alpha: 1.00)
     static let decisionBlue = UIColor(red: 0.24, green: 0.69, blue: 0.76, alpha: 1.00)
-    static let decisionBorderGray = UIColor(red: 0.55, green: 0.55, blue: 0.57, alpha: 1.00)
+    static let decisionBorderGray = UIColor(red: 0.29, green: 0.29, blue: 0.29, alpha: 1.00)
     static let decisionBlack = UIColor(red: 0.14, green: 0.12, blue: 0.12, alpha: 1.00)
     static let decisionBackground = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00)
     static let decisionRetroBackground = UIColor(red: 0.92, green: 0.92, blue: 0.90, alpha: 1.00)
