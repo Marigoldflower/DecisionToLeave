@@ -32,6 +32,10 @@
 		EA52C4AC2B613C210012F37B /* LINESeedKR-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4A92B613C210012F37B /* LINESeedKR-Bd.otf */; };
 		EA52C4AD2B613C210012F37B /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */; };
 		EA52C4B22B621E050012F37B /* CreateDetoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B12B621E050012F37B /* CreateDetoxView.swift */; };
+		EA52C4B72B622D5A0012F37B /* DeviceVibrateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B62B622D5A0012F37B /* DeviceVibrateManager.swift */; };
+		EA52C4B92B6234C80012F37B /* DetoxSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */; };
+		EA52C4BC2B623C0D0012F37B /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4BB2B623C0D0012F37B /* CustomNavigationBar.swift */; };
+		EA52C4BE2B6249BD0012F37B /* DetoxTimeRemainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		EA52C4A92B613C210012F37B /* LINESeedKR-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Bd.otf"; sourceTree = "<group>"; };
 		EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LINESeedKR-Rg.otf"; path = "../../../../../Downloads/LINE_SeedKR_2023.09.06/OTF/LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
 		EA52C4B12B621E050012F37B /* CreateDetoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDetoxView.swift; sourceTree = "<group>"; };
+		EA52C4B62B622D5A0012F37B /* DeviceVibrateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceVibrateManager.swift; sourceTree = "<group>"; };
+		EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxSettingController.swift; sourceTree = "<group>"; };
+		EA52C4BB2B623C0D0012F37B /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxTimeRemainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 			children = (
 				EA52C4582B5A55EA0012F37B /* AppDelegate.swift */,
 				EA52C45A2B5A55EA0012F37B /* SceneDelegate.swift */,
+				EA52C4B52B622D260012F37B /* Shared */,
 				EA52C48D2B5A56470012F37B /* Fonts */,
 				EA52C48E2B5A564B0012F37B /* Helpers */,
 				EA52C48C2B5A56370012F37B /* Model */,
@@ -238,8 +247,8 @@
 				EA52C48F2B5A565B0012F37B /* ViewDrawable.swift */,
 				EA52C4982B5A586A0012F37B /* Bindable.swift */,
 				EA52C49C2B5A58F20012F37B /* MyColor.swift */,
-				EA52C4A32B61207D0012F37B /* DeviceSizeMananger.swift */,
 				EA52C4A72B613A6D0012F37B /* MyFonts.swift */,
+				EA52C4BB2B623C0D0012F37B /* CustomNavigationBar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +267,8 @@
 			children = (
 				EA52C45C2B5A55EA0012F37B /* DetoxController.swift */,
 				EA52C4B12B621E050012F37B /* CreateDetoxView.swift */,
+				EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */,
+				EA52C4BA2B6235090012F37B /* PresentView */,
 			);
 			path = DetoxView;
 			sourceTree = "<group>";
@@ -268,6 +279,23 @@
 				EA52C4882B5A56120012F37B /* SettingController.swift */,
 			);
 			path = SettingView;
+			sourceTree = "<group>";
+		};
+		EA52C4B52B622D260012F37B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EA52C4A32B61207D0012F37B /* DeviceSizeMananger.swift */,
+				EA52C4B62B622D5A0012F37B /* DeviceVibrateManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EA52C4BA2B6235090012F37B /* PresentView */ = {
+			isa = PBXGroup;
+			children = (
+				EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */,
+			);
+			path = PresentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,16 +540,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA52C4B92B6234C80012F37B /* DetoxSettingController.swift in Sources */,
 				EA52C4B22B621E050012F37B /* CreateDetoxView.swift in Sources */,
 				EA52C4892B5A56120012F37B /* SettingController.swift in Sources */,
 				EA52C4A42B61207D0012F37B /* DeviceSizeMananger.swift in Sources */,
+				EA52C4BC2B623C0D0012F37B /* CustomNavigationBar.swift in Sources */,
 				EA52C4902B5A565B0012F37B /* ViewDrawable.swift in Sources */,
+				EA52C4BE2B6249BD0012F37B /* DetoxTimeRemainView.swift in Sources */,
 				EA52C4A12B60E43D0012F37B /* MainTabBarController.swift in Sources */,
 				EA52C49B2B5A58880012F37B /* CustomTabBar.swift in Sources */,
 				EA52C4992B5A586A0012F37B /* Bindable.swift in Sources */,
 				EA52C45D2B5A55EA0012F37B /* DetoxController.swift in Sources */,
 				EA52C49F2B60D5D40012F37B /* CustomTabBarViewModel.swift in Sources */,
 				EA52C4A82B613A6D0012F37B /* MyFonts.swift in Sources */,
+				EA52C4B72B622D5A0012F37B /* DeviceVibrateManager.swift in Sources */,
 				EA52C49D2B5A58F20012F37B /* MyColor.swift in Sources */,
 				EA52C4592B5A55EA0012F37B /* AppDelegate.swift in Sources */,
 				EA52C45B2B5A55EA0012F37B /* SceneDelegate.swift in Sources */,

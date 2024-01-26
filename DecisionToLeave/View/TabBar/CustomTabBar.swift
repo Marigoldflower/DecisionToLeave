@@ -12,11 +12,11 @@ import RxCocoa
 
 final class CustomTabBar: UIView, View {
     
-    // MARK: - Generator
-    let generator = UIImpactFeedbackGenerator(style: .soft)
+    // MARK: - Vibrate Manager
+    private let deviceVibrate = DeviceVibrateManager.shared
     
     // MARK: - Size Manager
-    let deviceSize = DeviceSizeManager.shared
+    private let deviceSize = DeviceSizeManager.shared
     
     // MARK: - DisposeBag
     var disposeBag = DisposeBag()
@@ -89,7 +89,7 @@ extension CustomTabBar: Bindable {
             .subscribe(onNext: { [weak self] detoxTabIsTapped in
                 if detoxTabIsTapped {
                     NotificationCenter.default.post(name: NSNotification.Name("ChangeTab"), object: nil, userInfo: ["tab": 0])
-                    self?.generator.impactOccurred()
+                    self?.deviceVibrate.generator.impactOccurred()
                 }
             })
             .disposed(by: disposeBag)
@@ -99,7 +99,7 @@ extension CustomTabBar: Bindable {
             .subscribe(onNext: { [weak self] rankingTabIsTapped in
                 if rankingTabIsTapped {
                     NotificationCenter.default.post(name: NSNotification.Name("ChangeTab"), object: nil, userInfo: ["tab": 1])
-                    self?.generator.impactOccurred()
+                    self?.deviceVibrate.generator.impactOccurred()
                 }
             })
             .disposed(by: disposeBag)

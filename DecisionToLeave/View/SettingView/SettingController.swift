@@ -29,12 +29,6 @@ final class SettingController: UIViewController {
         super.viewDidLoad()
         configureUI()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("RankingController 화면이 보임")
-    }
-    
 }
 
 extension SettingController: ViewDrawable {

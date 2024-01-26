@@ -8,8 +8,6 @@
 import UIKit
 
 // 393 x 852 - 시뮬레이터용 iPhone 14 pro 크기
-
-
 final class DeviceSizeManager {
     static let shared = DeviceSizeManager()
     

@@ -52,9 +52,9 @@ final class CreateDetoxView: UIView {
 
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .LINESeedRegular(size: deviceSize.adaptedSize(17))
+        label.font = .LINESeedRegular(size: deviceSize.adaptedSize(16))
         label.textColor = .decisionBlack
-        label.text = "버튼을 눌러 휴대폰을 잠그세요"
+        label.text = "버튼을 눌러 휴대폰 잠금 설정을 추가해주세요"
         return label
     }()
     
