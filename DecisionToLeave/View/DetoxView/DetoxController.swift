@@ -117,20 +117,22 @@ final class DetoxController: UIViewController {
     }
     
     private func setNavigationCloseButton(at view: DetoxSettingController) {
-        let customButton: UIButton = {
-            let button = UIButton(frame: CGRect(x: 0, y: 0, width: Int(self.deviceSize.adaptedSize(45)), height: Int(self.deviceSize.adaptedSize(13))))
-            button.setTitle("닫기", for: .normal)
-            button.titleLabel?.font = .LINESeedRegular(size: self.deviceSize.adaptedSize(13))
-            button.setTitleColor(.decisionBlack, for: .normal)
-            button.layer.borderColor = UIColor.decisionBorderGray.cgColor
-            button.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
-            button.layer.cornerRadius = self.deviceSize.adaptedSize(13)
-            button.layer.masksToBounds = true
-            button.backgroundColor = .decisionPink
-            button.addTarget(self, action: #selector(rightButtonAction), for: .touchUpInside)
-            return button
-        }()
+//        let customButton: UIButton = {
+//            let button = UIButton(frame: CGRect(x: 0, y: 0, width: Int(self.deviceSize.adaptedSize(45)), height: Int(self.deviceSize.adaptedSize(13))))
+//            button.setTitle("닫기", for: .normal)
+//            button.titleLabel?.font = .LINESeedRegular(size: self.deviceSize.adaptedSize(13))
+//            button.setTitleColor(.decisionBlack, for: .normal)
+//            button.layer.borderColor = UIColor.decisionBorderGray.cgColor
+//            button.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
+//            button.layer.cornerRadius = self.deviceSize.adaptedSize(13)
+//            button.layer.masksToBounds = true
+//            button.backgroundColor = .decisionPink
+//            button.addTarget(self, action: #selector(rightButtonAction), for: .touchUpInside)
+//            return button
+//        }()
         
+        let customButton = CustomCloseButton()
+        customButton.delegate = self
         let closeButton = UIBarButtonItem(customView: customButton)
         view.navigationItem.rightBarButtonItem = closeButton
     }
@@ -196,5 +198,12 @@ extension DetoxController: ViewDrawable {
     // Tap Gestures 설정
     private func setTapGestures() {
         createDetoxView.addGestureRecognizer(tapGesture)
+    }
+}
+
+extension DetoxController: CustomCloseButtonDelegate {
+    func closeButtonTapped() {
+        self.deviceVibrate.generator.impactOccurred()
+        self.dismiss(animated: true)
     }
 }

@@ -36,6 +36,7 @@
 		EA52C4B92B6234C80012F37B /* DetoxSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */; };
 		EA52C4BC2B623C0D0012F37B /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4BB2B623C0D0012F37B /* CustomNavigationBar.swift */; };
 		EA52C4BE2B6249BD0012F37B /* DetoxTimeRemainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */; };
+		EA52C4C52B67951C0012F37B /* CustomCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxSettingController.swift; sourceTree = "<group>"; };
 		EA52C4BB2B623C0D0012F37B /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxTimeRemainView.swift; sourceTree = "<group>"; };
+		EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCloseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				EA52C45C2B5A55EA0012F37B /* DetoxController.swift */,
+				EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */,
 				EA52C4B12B621E050012F37B /* CreateDetoxView.swift */,
 				EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */,
 				EA52C4BA2B6235090012F37B /* PresentView */,
@@ -549,6 +552,7 @@
 				EA52C4BE2B6249BD0012F37B /* DetoxTimeRemainView.swift in Sources */,
 				EA52C4A12B60E43D0012F37B /* MainTabBarController.swift in Sources */,
 				EA52C49B2B5A58880012F37B /* CustomTabBar.swift in Sources */,
+				EA52C4C52B67951C0012F37B /* CustomCloseButton.swift in Sources */,
 				EA52C4992B5A586A0012F37B /* Bindable.swift in Sources */,
 				EA52C45D2B5A55EA0012F37B /* DetoxController.swift in Sources */,
 				EA52C49F2B60D5D40012F37B /* CustomTabBarViewModel.swift in Sources */,
@@ -740,8 +744,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -770,8 +773,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

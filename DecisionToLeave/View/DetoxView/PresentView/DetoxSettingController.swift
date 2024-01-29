@@ -29,8 +29,6 @@ final class DetoxSettingController: UIViewController {
         label.textColor = .decisionBlack
         return label
     }()
-    
-    
    
     private lazy var createTimeSettingButton: UIButton = {
         let button = UIButton()

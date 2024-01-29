@@ -102,12 +102,12 @@ extension CreateDetoxView: ViewDrawable {
         
         horizontalView.snp.makeConstraints { make in
             make.width.equalTo(deviceSize.adaptedSize(20))
-            make.height.equalTo(deviceSize.adaptedSize(3))
+            make.height.equalTo(deviceSize.adaptedSize(3.8))
             make.center.equalTo(plusImageView.snp.center)
         }
         
         verticalView.snp.makeConstraints { make in
-            make.width.equalTo(deviceSize.adaptedSize(3))
+            make.width.equalTo(deviceSize.adaptedSize(3.8))
             make.height.equalTo(deviceSize.adaptedSize(20))
             make.center.equalTo(plusImageView.snp.center)
         }
