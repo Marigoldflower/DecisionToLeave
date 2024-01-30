@@ -14,7 +14,7 @@ final class CreateDetoxView: UIView {
     let deviceSize = DeviceSizeManager.shared
     
     // MARK: - UI Components
-    private lazy var plusImageView: UIImageView = {
+    lazy var plusImageView: UIImageView = {
         let imageView = UIImageView()
         let plusConfig = UIImage.SymbolConfiguration(pointSize: deviceSize.adaptedSize(40), weight: .regular, scale: .medium)
         let plusImage = UIImage(systemName: "plus.circle.fill", withConfiguration: plusConfig)
@@ -23,7 +23,7 @@ final class CreateDetoxView: UIView {
         return imageView
     }()
     
-    private lazy var plusImageBorder: UIView = {
+    lazy var plusImageBorder: UIView = {
         let view = UIView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = deviceSize.adaptedSize(2.0)
@@ -102,12 +102,12 @@ extension CreateDetoxView: ViewDrawable {
         
         horizontalView.snp.makeConstraints { make in
             make.width.equalTo(deviceSize.adaptedSize(20))
-            make.height.equalTo(deviceSize.adaptedSize(3.8))
+            make.height.equalTo(deviceSize.adaptedSize(4))
             make.center.equalTo(plusImageView.snp.center)
         }
         
         verticalView.snp.makeConstraints { make in
-            make.width.equalTo(deviceSize.adaptedSize(3.8))
+            make.width.equalTo(deviceSize.adaptedSize(4))
             make.height.equalTo(deviceSize.adaptedSize(20))
             make.center.equalTo(plusImageView.snp.center)
         }

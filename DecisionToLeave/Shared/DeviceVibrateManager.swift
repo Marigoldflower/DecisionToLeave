@@ -12,3 +12,9 @@ final class DeviceVibrateManager {
     
     let generator = UIImpactFeedbackGenerator(style: .soft)
 }
+
+
+func vibrateGenerate() {
+    let deviceVibrate = DeviceVibrateManager.shared
+    deviceVibrate.generator.impactOccurred()
+}

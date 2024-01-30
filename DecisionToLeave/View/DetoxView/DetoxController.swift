@@ -8,19 +8,15 @@
 import UIKit
 import SnapKit
 
-final class DetoxController: UIViewController {
-    
-    // MARK: - Vibrate Manager
-    private let deviceVibrate = DeviceVibrateManager.shared
-    
+final class DetoxController: UIViewController{
     // MARK: - Size Manager
     private let deviceSize = DeviceSizeManager.shared
     
     // MARK: - Tap Gestures
-    lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(createDetoxViewTapped))
+    lazy var createDetoxViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(createDetoxViewTapped))
     
     // MARK: - PresentView
-    private var detoxSettingController: DetoxSettingController! = nil
+    private var timeSettingForDetoxController: TimeSettingForDetoxController! = nil
     
     // MARK: - UI Components
     private lazy var lockThePhone: UILabel = {
@@ -40,8 +36,8 @@ final class DetoxController: UIViewController {
         return view
     }()
     
-    private lazy var detoxTimeRemainView: DetoxTimeRemainView = {
-        let view = DetoxTimeRemainView()
+    private lazy var detoxTimeRemainView: TimeReminderView = {
+        let view = TimeReminderView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
         view.layer.cornerRadius = self.deviceSize.adaptedSize(28)
@@ -69,29 +65,45 @@ final class DetoxController: UIViewController {
         presentToDetoxSettingController()
     }
     
-    private func vibrateGenerate() {
-        self.deviceVibrate.generator.impactOccurred()
-    }
-    
     private func presentToDetoxSettingController() {
-        detoxSettingController = DetoxSettingController()
-        setNavigationTitleAndButton(at: detoxSettingController)
-        setNavigationController(appearance: customNavigationBar())
+        timeSettingForDetoxController = TimeSettingForDetoxController()
+        setNavigationTitleAndButton(at: timeSettingForDetoxController)
+        setNavigationController(appearance: customNavigationBarAppearance())
     }
     
-    private func customNavigationBar() -> UINavigationBarAppearance {
-        let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.configureWithOpaqueBackground()
-        navigationBarAppearance.backgroundColor = .decisionRetroBackground // UINavigationBar의 bar 색상 설정
-        navigationBarAppearance.titleTextAttributes = [
-            .font: UIFont.LINESeedRegular(size: deviceSize.adaptedSize(18)) as Any, // 텍스트 폰트 설정
-            .foregroundColor: UIColor.decisionBlack // 텍스트 색상 설정
-        ]
-        return navigationBarAppearance
+    private func setNavigationTitleAndButton(at timeSettingForDetoxController: TimeSettingForDetoxController) {
+        setNavigationBarTitle(at: timeSettingForDetoxController)
+        setNavigationCloseButton(at: timeSettingForDetoxController)
+    }
+    
+    private func setNavigationBarTitle(at timeSettingForDetoxController: TimeSettingForDetoxController) {
+        timeSettingForDetoxController.navigationItem.title = "휴대폰 잠그기"
+    }
+    
+    private func setNavigationCloseButton(at timeSettingForDetoxController: TimeSettingForDetoxController) {
+        
+        let customCloseButton : CustomCloseButton = {
+            let button = CustomCloseButton()
+            button.insertSubview(button.closeButtonBorder, belowSubview: button.closeButton)
+            button.closeButton.addTarget(self, action: #selector(customCloseButtonTapped), for: .touchUpInside)
+            return button
+        }()
+        
+        customCloseButton.snp.makeConstraints { make in
+            make.width.height.equalTo(self.deviceSize.adaptedSize(25))
+        }
+        
+        let barButtonItem = UIBarButtonItem(customView: customCloseButton)
+        timeSettingForDetoxController.navigationItem.rightBarButtonItem = barButtonItem
+    }
+    
+    @objc func customCloseButtonTapped() {
+        vibrateGenerate()
+        self.dismiss(animated: true)
     }
     
     private func setNavigationController(appearance: UINavigationBarAppearance) {
-        let navigation = UINavigationController(rootViewController: detoxSettingController)
+        let navigation = UINavigationController(rootViewController: timeSettingForDetoxController)
         navigation.modalPresentationStyle = .fullScreen
         navigation.navigationBar.standardAppearance = appearance
         navigation.navigationBar.scrollEdgeAppearance = appearance
@@ -107,39 +119,15 @@ final class DetoxController: UIViewController {
         navigation.navigationBar.addSubview(navBorder)
     }
     
-    private func setNavigationTitleAndButton(at view: DetoxSettingController) {
-        setNavigationBarTitle(at: view)
-        setNavigationCloseButton(at: view)
-    }
-    
-    private func setNavigationBarTitle(at view: DetoxSettingController) {
-        view.navigationItem.title = "휴대폰 잠그기"
-    }
-    
-    private func setNavigationCloseButton(at view: DetoxSettingController) {
-//        let customButton: UIButton = {
-//            let button = UIButton(frame: CGRect(x: 0, y: 0, width: Int(self.deviceSize.adaptedSize(45)), height: Int(self.deviceSize.adaptedSize(13))))
-//            button.setTitle("닫기", for: .normal)
-//            button.titleLabel?.font = .LINESeedRegular(size: self.deviceSize.adaptedSize(13))
-//            button.setTitleColor(.decisionBlack, for: .normal)
-//            button.layer.borderColor = UIColor.decisionBorderGray.cgColor
-//            button.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
-//            button.layer.cornerRadius = self.deviceSize.adaptedSize(13)
-//            button.layer.masksToBounds = true
-//            button.backgroundColor = .decisionPink
-//            button.addTarget(self, action: #selector(rightButtonAction), for: .touchUpInside)
-//            return button
-//        }()
-        
-        let customButton = CustomCloseButton()
-        customButton.delegate = self
-        let closeButton = UIBarButtonItem(customView: customButton)
-        view.navigationItem.rightBarButtonItem = closeButton
-    }
-    
-    @objc func rightButtonAction() {
-        deviceVibrate.generator.impactOccurred()
-        self.dismiss(animated: true)
+    private func customNavigationBarAppearance() -> UINavigationBarAppearance {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationBarAppearance.backgroundColor = .decisionRetroBackground // UINavigationBar의 bar 색상 설정
+        navigationBarAppearance.titleTextAttributes = [
+            .font: UIFont.LINESeedRegular(size: deviceSize.adaptedSize(18)) as Any, // 텍스트 폰트 설정
+            .foregroundColor: UIColor.decisionBlack // 텍스트 색상 설정
+        ]
+        return navigationBarAppearance
     }
 }
 
@@ -147,7 +135,7 @@ extension DetoxController: ViewDrawable {
     func configureUI() {
         setBackgroundColor()
         setAutolayout()
-        setSelectedCircleBelowToDetoxTab()
+        insertSubviews()
         setTapGestures()
     }
     
@@ -191,19 +179,17 @@ extension DetoxController: ViewDrawable {
         }
     }
     
+    private func insertSubviews() {
+        setSelectedCircleBelowToDetoxTab()
+    }
+    
     private func setSelectedCircleBelowToDetoxTab() {
         customTabBar.insertSubview(customTabBar.selectedCircle, belowSubview: customTabBar.detoxTab)
     }
     
     // Tap Gestures 설정
     private func setTapGestures() {
-        createDetoxView.addGestureRecognizer(tapGesture)
+        createDetoxView.addGestureRecognizer(createDetoxViewTapGesture)
     }
 }
 
-extension DetoxController: CustomCloseButtonDelegate {
-    func closeButtonTapped() {
-        self.deviceVibrate.generator.impactOccurred()
-        self.dismiss(animated: true)
-    }
-}

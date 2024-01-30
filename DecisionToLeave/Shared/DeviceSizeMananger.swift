@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+
 
 // 393 x 852 - 시뮬레이터용 iPhone 14 pro 크기
 final class DeviceSizeManager {
@@ -27,4 +29,27 @@ final class DeviceSizeManager {
     func adaptedSize(_ size: CGFloat) -> CGFloat {
         return size * widthRatio
     }
+}
+
+
+extension ConstraintOffsetTarget {
+    
+    internal var constraintOffsetTargetValue: CGFloat {
+        let offset: CGFloat
+        if let amount = self as? Float {
+            offset = CGFloat(amount)
+        } else if let amount = self as? Double {
+            offset = CGFloat(amount)
+        } else if let amount = self as? CGFloat {
+            offset = CGFloat(amount)
+        } else if let amount = self as? Int {
+            offset = CGFloat(amount)
+        } else if let amount = self as? UInt {
+            offset = CGFloat(amount)
+        } else {
+            offset = 0.0
+        }
+        return offset
+    }
+    
 }

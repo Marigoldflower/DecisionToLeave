@@ -11,10 +11,6 @@ import ReactorKit
 import RxCocoa
 
 final class CustomTabBar: UIView, View {
-    
-    // MARK: - Vibrate Manager
-    private let deviceVibrate = DeviceVibrateManager.shared
-    
     // MARK: - Size Manager
     private let deviceSize = DeviceSizeManager.shared
     
@@ -89,7 +85,7 @@ extension CustomTabBar: Bindable {
             .subscribe(onNext: { [weak self] detoxTabIsTapped in
                 if detoxTabIsTapped {
                     NotificationCenter.default.post(name: NSNotification.Name("ChangeTab"), object: nil, userInfo: ["tab": 0])
-                    self?.deviceVibrate.generator.impactOccurred()
+                    vibrateGenerate()
                 }
             })
             .disposed(by: disposeBag)
@@ -99,7 +95,7 @@ extension CustomTabBar: Bindable {
             .subscribe(onNext: { [weak self] rankingTabIsTapped in
                 if rankingTabIsTapped {
                     NotificationCenter.default.post(name: NSNotification.Name("ChangeTab"), object: nil, userInfo: ["tab": 1])
-                    self?.deviceVibrate.generator.impactOccurred()
+                    vibrateGenerate()
                 }
             })
             .disposed(by: disposeBag)

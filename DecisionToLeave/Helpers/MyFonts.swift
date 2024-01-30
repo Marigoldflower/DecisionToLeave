@@ -20,4 +20,8 @@ extension UIFont {
         return UIFont(name: "LINESeedSansKR-Bold", size: size)
     }
     
+    static func DIGI(size: CGFloat) -> UIFont? {
+        return UIFont(name: "DS-Digital", size: size)
+    }
+    
 }

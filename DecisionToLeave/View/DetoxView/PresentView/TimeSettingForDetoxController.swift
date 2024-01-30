@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class DetoxSettingController: UIViewController {
+final class TimeSettingForDetoxController: UIViewController {
     
     // MARK: - Vibrate Manager
     private let deviceVibrate = DeviceVibrateManager.shared
@@ -22,12 +22,13 @@ final class DetoxSettingController: UIViewController {
     // 3. 시간 설정하기 버튼 만들기 
     
     // MARK: - UI Components
-    private lazy var lockThePhoneSettingLabel: UILabel = {
-        let label = UILabel()
-        label.font = .LINESeedBold(size: self.deviceSize.adaptedSize(23))
-        label.text = "휴대폰 잠금 설정"
-        label.textColor = .decisionBlack
-        return label
+    private lazy var timeDecideView: TimeDecideView = {
+        let view = TimeDecideView()
+        view.layer.borderColor = UIColor.decisionBorderGray.cgColor
+        view.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
+        view.layer.cornerRadius = self.deviceSize.adaptedSize(20)
+        view.layer.masksToBounds = true
+        return view
     }()
    
     private lazy var createTimeSettingButton: UIButton = {
@@ -49,8 +50,9 @@ final class DetoxSettingController: UIViewController {
     }
 }
 
-extension DetoxSettingController: ViewDrawable {
+extension TimeSettingForDetoxController: ViewDrawable {
     func configureUI() {
+        setAlarmBorderViewBelowToAlarmImage()
         setBackgroundColor()
         setAutolayout()
     }
@@ -60,11 +62,13 @@ extension DetoxSettingController: ViewDrawable {
     }
     
     func setAutolayout() {
-        [lockThePhoneSettingLabel, createTimeSettingButton].forEach { view.addSubview($0) }
+        [timeDecideView, createTimeSettingButton].forEach { view.addSubview($0) }
         
-        lockThePhoneSettingLabel.snp.makeConstraints { make in
-            make.leading.equalTo(view.snp.leading).offset(self.deviceSize.adaptedSize(30))
+        timeDecideView.snp.makeConstraints { make in
+            make.leading.equalTo(view.snp.leading).offset(self.deviceSize.adaptedSize(20))
+            make.trailing.equalTo(view.snp.trailing).offset(self.deviceSize.adaptedSize(-20))
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(self.deviceSize.adaptedSize(30))
+            make.height.equalTo(self.deviceSize.adaptedSize(120))
         }
         
         createTimeSettingButton.snp.makeConstraints { make in
@@ -73,5 +77,9 @@ extension DetoxSettingController: ViewDrawable {
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(self.deviceSize.adaptedSize(-30))
             make.height.equalTo(self.deviceSize.adaptedSize(60))
         }
+    }
+    
+    private func setAlarmBorderViewBelowToAlarmImage() {
+        timeDecideView.insertSubview(timeDecideView.alarmBorderView, belowSubview: timeDecideView.alarmImageView)
     }
 }

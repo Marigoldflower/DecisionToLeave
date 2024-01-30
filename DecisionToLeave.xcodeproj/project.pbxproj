@@ -33,10 +33,14 @@
 		EA52C4AD2B613C210012F37B /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */; };
 		EA52C4B22B621E050012F37B /* CreateDetoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B12B621E050012F37B /* CreateDetoxView.swift */; };
 		EA52C4B72B622D5A0012F37B /* DeviceVibrateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B62B622D5A0012F37B /* DeviceVibrateManager.swift */; };
-		EA52C4B92B6234C80012F37B /* DetoxSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */; };
+		EA52C4B92B6234C80012F37B /* TimeSettingForDetoxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4B82B6234C80012F37B /* TimeSettingForDetoxController.swift */; };
 		EA52C4BC2B623C0D0012F37B /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4BB2B623C0D0012F37B /* CustomNavigationBar.swift */; };
-		EA52C4BE2B6249BD0012F37B /* DetoxTimeRemainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */; };
+		EA52C4BE2B6249BD0012F37B /* TimeReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4BD2B6249BD0012F37B /* TimeReminderView.swift */; };
 		EA52C4C52B67951C0012F37B /* CustomCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */; };
+		EA52C5072B68CA900012F37B /* TimeSettingForDetoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5062B68CA900012F37B /* TimeSettingForDetoxViewModel.swift */; };
+		EA52C5092B68CB4A0012F37B /* DetoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5082B68CB4A0012F37B /* DetoxViewModel.swift */; };
+		EA52C50B2B68D4550012F37B /* DS-DIGI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EA52C50A2B68D4550012F37B /* DS-DIGI.TTF */; };
+		EA52C50D2B68D6680012F37B /* TimeDecideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C50C2B68D6680012F37B /* TimeDecideView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,10 +97,14 @@
 		EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LINESeedKR-Rg.otf"; path = "../../../../../Downloads/LINE_SeedKR_2023.09.06/OTF/LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
 		EA52C4B12B621E050012F37B /* CreateDetoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDetoxView.swift; sourceTree = "<group>"; };
 		EA52C4B62B622D5A0012F37B /* DeviceVibrateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceVibrateManager.swift; sourceTree = "<group>"; };
-		EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxSettingController.swift; sourceTree = "<group>"; };
+		EA52C4B82B6234C80012F37B /* TimeSettingForDetoxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingForDetoxController.swift; sourceTree = "<group>"; };
 		EA52C4BB2B623C0D0012F37B /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
-		EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxTimeRemainView.swift; sourceTree = "<group>"; };
+		EA52C4BD2B6249BD0012F37B /* TimeReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeReminderView.swift; sourceTree = "<group>"; };
 		EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCloseButton.swift; sourceTree = "<group>"; };
+		EA52C5062B68CA900012F37B /* TimeSettingForDetoxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingForDetoxViewModel.swift; sourceTree = "<group>"; };
+		EA52C5082B68CB4A0012F37B /* DetoxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxViewModel.swift; sourceTree = "<group>"; };
+		EA52C50A2B68D4550012F37B /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
+		EA52C50C2B68D6680012F37B /* TimeDecideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDecideView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				EA52C49E2B60D5D40012F37B /* CustomTabBarViewModel.swift */,
+				EA52C5082B68CB4A0012F37B /* DetoxViewModel.swift */,
+				EA52C5062B68CA900012F37B /* TimeSettingForDetoxViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -239,6 +249,7 @@
 				EA52C4A92B613C210012F37B /* LINESeedKR-Bd.otf */,
 				EA52C4AA2B613C210012F37B /* LINESeedKR-Rg.otf */,
 				EA52C4932B5A57A40012F37B /* LINESeedKR-Th.otf */,
+				EA52C50A2B68D4550012F37B /* DS-DIGI.TTF */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -270,7 +281,7 @@
 				EA52C45C2B5A55EA0012F37B /* DetoxController.swift */,
 				EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */,
 				EA52C4B12B621E050012F37B /* CreateDetoxView.swift */,
-				EA52C4BD2B6249BD0012F37B /* DetoxTimeRemainView.swift */,
+				EA52C4BD2B6249BD0012F37B /* TimeReminderView.swift */,
 				EA52C4BA2B6235090012F37B /* PresentView */,
 			);
 			path = DetoxView;
@@ -296,7 +307,8 @@
 		EA52C4BA2B6235090012F37B /* PresentView */ = {
 			isa = PBXGroup;
 			children = (
-				EA52C4B82B6234C80012F37B /* DetoxSettingController.swift */,
+				EA52C4B82B6234C80012F37B /* TimeSettingForDetoxController.swift */,
+				EA52C50C2B68D6680012F37B /* TimeDecideView.swift */,
 			);
 			path = PresentView;
 			sourceTree = "<group>";
@@ -415,6 +427,7 @@
 				EA52C4962B5A57A40012F37B /* LINESeedKR-Th.otf in Resources */,
 				EA52C4AD2B613C210012F37B /* LINESeedKR-Rg.otf in Resources */,
 				EA52C4622B5A55EC0012F37B /* Assets.xcassets in Resources */,
+				EA52C50B2B68D4550012F37B /* DS-DIGI.TTF in Resources */,
 				EA52C4602B5A55EA0012F37B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,13 +556,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA52C4B92B6234C80012F37B /* DetoxSettingController.swift in Sources */,
+				EA52C4B92B6234C80012F37B /* TimeSettingForDetoxController.swift in Sources */,
 				EA52C4B22B621E050012F37B /* CreateDetoxView.swift in Sources */,
+				EA52C50D2B68D6680012F37B /* TimeDecideView.swift in Sources */,
 				EA52C4892B5A56120012F37B /* SettingController.swift in Sources */,
 				EA52C4A42B61207D0012F37B /* DeviceSizeMananger.swift in Sources */,
 				EA52C4BC2B623C0D0012F37B /* CustomNavigationBar.swift in Sources */,
+				EA52C5072B68CA900012F37B /* TimeSettingForDetoxViewModel.swift in Sources */,
 				EA52C4902B5A565B0012F37B /* ViewDrawable.swift in Sources */,
-				EA52C4BE2B6249BD0012F37B /* DetoxTimeRemainView.swift in Sources */,
+				EA52C4BE2B6249BD0012F37B /* TimeReminderView.swift in Sources */,
 				EA52C4A12B60E43D0012F37B /* MainTabBarController.swift in Sources */,
 				EA52C49B2B5A58880012F37B /* CustomTabBar.swift in Sources */,
 				EA52C4C52B67951C0012F37B /* CustomCloseButton.swift in Sources */,
@@ -561,6 +576,7 @@
 				EA52C49D2B5A58F20012F37B /* MyColor.swift in Sources */,
 				EA52C4592B5A55EA0012F37B /* AppDelegate.swift in Sources */,
 				EA52C45B2B5A55EA0012F37B /* SceneDelegate.swift in Sources */,
+				EA52C5092B68CB4A0012F37B /* DetoxViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

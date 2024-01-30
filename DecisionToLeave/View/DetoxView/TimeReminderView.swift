@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class DetoxTimeRemainView: UIView {
+final class TimeReminderView: UIView {
     
     // MARK: - Size Manager
     let deviceSize = DeviceSizeManager.shared
@@ -24,8 +24,8 @@ final class DetoxTimeRemainView: UIView {
     
     private lazy var timeRemained: UILabel = {
         let label = UILabel()
-        label.font = .LINESeedRegular(size: deviceSize.adaptedSize(50))
-        label.text = "00 : 00"
+        label.font = .DIGI(size: deviceSize.adaptedSize(75))
+        label.text = "00:00"
         label.textColor = .decisionBlack
         return label
     }()
@@ -50,7 +50,7 @@ final class DetoxTimeRemainView: UIView {
     }
 }
 
-extension DetoxTimeRemainView: ViewDrawable {
+extension TimeReminderView: ViewDrawable {
     func configureUI() {
         setBackgroundColor()
         setAutolayout()

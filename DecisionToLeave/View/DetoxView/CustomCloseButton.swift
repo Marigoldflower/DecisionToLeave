@@ -21,22 +21,22 @@ final class CustomCloseButton: UIView {
     weak var delegate: CustomCloseButtonDelegate?
     
     // MARK: - UI Components
-    private lazy var closeButton: UIButton = {
+    lazy var closeButton: UIButton = {
         let button = UIButton()
         let closeConfig = UIImage.SymbolConfiguration(pointSize: deviceSize.adaptedSize(25), weight: .regular, scale: .medium)
         let closeImage = UIImage(systemName: "xmark.circle.fill", withConfiguration: closeConfig)
         button.setImage(closeImage, for: .normal)
         button.tintColor = .decisionPink
-        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         return button
     }()
-    
-    private lazy var closeButtonBorder: UIView = {
+
+    lazy var closeButtonBorder: UIView = {
         let view = UIView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = deviceSize.adaptedSize(2.0)
-        view.layer.cornerRadius = deviceSize.adaptedSize(12.5)
+        view.layer.cornerRadius = deviceSize.adaptedSize(14.5)
         view.layer.masksToBounds = true
+        view.backgroundColor = .decisionBorderGray
         return view
     }()
     
@@ -68,12 +68,7 @@ final class CustomCloseButton: UIView {
     required init?(coder: NSCoder) {
         fatalError()
     }
-    
-    // MARK: - @objc
-    @objc func closeButtonTapped() {
-        print("closeButton이 눌렸어?")
-        delegate?.closeButtonTapped()
-    }
+
 }
 
 extension CustomCloseButton: ViewDrawable {
@@ -90,25 +85,26 @@ extension CustomCloseButton: ViewDrawable {
         [closeButton, closeButtonBorder, xMarkHeadingToLeft, xMarkHeadingToRight].forEach { self.addSubview($0) }
         
         closeButton.snp.makeConstraints { make in
-            make.trailing.equalTo(self.snp.trailing).offset(deviceSize.adaptedSize(10))
-            make.centerY.equalTo(self.snp.centerY)
+            make.center.equalTo(self.snp.center)
         }
         
         closeButtonBorder.snp.makeConstraints { make in
             make.center.equalTo(closeButton.snp.center)
-            make.width.height.equalTo(deviceSize.adaptedSize(25))
+            make.width.height.equalTo(deviceSize.adaptedSize(29))
         }
         
         xMarkHeadingToLeft.snp.makeConstraints { make in
-            make.width.equalTo(deviceSize.adaptedSize(15))
-            make.height.equalTo(deviceSize.adaptedSize(3))
             make.center.equalTo(closeButton.snp.center)
+            make.width.equalTo(deviceSize.adaptedSize(3))
+            make.height.equalTo(deviceSize.adaptedSize(14))
         }
         
         xMarkHeadingToRight.snp.makeConstraints { make in
-            make.width.equalTo(deviceSize.adaptedSize(15))
-            make.height.equalTo(deviceSize.adaptedSize(3))
             make.center.equalTo(closeButton.snp.center)
+            make.width.equalTo(deviceSize.adaptedSize(3))
+            make.height.equalTo(deviceSize.adaptedSize(14))
         }
+        
     }
+    
 }
