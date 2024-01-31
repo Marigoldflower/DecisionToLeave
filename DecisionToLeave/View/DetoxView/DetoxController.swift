@@ -77,7 +77,7 @@ final class DetoxController: UIViewController{
     }
     
     private func setNavigationBarTitle(at timeSettingForDetoxController: TimeSettingForDetoxController) {
-        timeSettingForDetoxController.navigationItem.title = "휴대폰 잠그기"
+        timeSettingForDetoxController.navigationItem.title = "휴대폰 잠금 설정"
     }
     
     private func setNavigationCloseButton(at timeSettingForDetoxController: TimeSettingForDetoxController) {
@@ -85,6 +85,8 @@ final class DetoxController: UIViewController{
         let customCloseButton : CustomCloseButton = {
             let button = CustomCloseButton()
             button.insertSubview(button.closeButtonBorder, belowSubview: button.closeButton)
+            button.insertSubview(button.xMarkHeadingToLeft, belowSubview: button.closeButton)
+            button.insertSubview(button.xMarkHeadingToRight, belowSubview: button.closeButton)
             button.closeButton.addTarget(self, action: #selector(customCloseButtonTapped), for: .touchUpInside)
             return button
         }()
@@ -149,7 +151,7 @@ extension DetoxController: ViewDrawable {
         
         lockThePhone.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading).offset(self.deviceSize.adaptedSize(30))
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(self.deviceSize.adaptedSize(30))
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(self.deviceSize.adaptedSize(20))
         }
         
         createDetoxView.snp.makeConstraints { make in

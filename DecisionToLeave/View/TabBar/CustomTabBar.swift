@@ -58,7 +58,6 @@ final class CustomTabBar: UIView, View {
     required init?(coder: NSCoder) {
         fatalError()
     }
-    
 }
 
 extension CustomTabBar: Bindable {

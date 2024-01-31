@@ -25,7 +25,7 @@ final class TimeReminderView: UIView {
     private lazy var timeRemained: UILabel = {
         let label = UILabel()
         label.font = .DIGI(size: deviceSize.adaptedSize(75))
-        label.text = "00:00"
+        label.text = "00:00:00"
         label.textColor = .decisionBlack
         return label
     }()

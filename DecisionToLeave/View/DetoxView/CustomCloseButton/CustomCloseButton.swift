@@ -23,10 +23,10 @@ final class CustomCloseButton: UIView {
     // MARK: - UI Components
     lazy var closeButton: UIButton = {
         let button = UIButton()
-        let closeConfig = UIImage.SymbolConfiguration(pointSize: deviceSize.adaptedSize(25), weight: .regular, scale: .medium)
-        let closeImage = UIImage(systemName: "xmark.circle.fill", withConfiguration: closeConfig)
+        let closeConfig = UIImage.SymbolConfiguration(pointSize: deviceSize.adaptedSize(35), weight: .black, scale: .medium)
+        let closeImage = UIImage(systemName: "xmark.circle", withConfiguration: closeConfig)
         button.setImage(closeImage, for: .normal)
-        button.tintColor = .decisionPink
+        button.tintColor = .clear
         return button
     }()
 
@@ -36,11 +36,11 @@ final class CustomCloseButton: UIView {
         view.layer.borderWidth = deviceSize.adaptedSize(2.0)
         view.layer.cornerRadius = deviceSize.adaptedSize(14.5)
         view.layer.masksToBounds = true
-        view.backgroundColor = .decisionBorderGray
+        view.backgroundColor = .decisionPink
         return view
     }()
     
-    private lazy var xMarkHeadingToLeft: UIView = {
+    lazy var xMarkHeadingToLeft: UIView = {
         let view = UIView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = deviceSize.adaptedSize(2.0)
@@ -50,7 +50,7 @@ final class CustomCloseButton: UIView {
         return view
     }()
     
-    private lazy var xMarkHeadingToRight: UIView = {
+    lazy var xMarkHeadingToRight: UIView = {
         let view = UIView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = deviceSize.adaptedSize(2.0)
@@ -98,7 +98,7 @@ extension CustomCloseButton: ViewDrawable {
             make.width.equalTo(deviceSize.adaptedSize(3))
             make.height.equalTo(deviceSize.adaptedSize(14))
         }
-        
+
         xMarkHeadingToRight.snp.makeConstraints { make in
             make.center.equalTo(closeButton.snp.center)
             make.width.equalTo(deviceSize.adaptedSize(3))

@@ -41,6 +41,7 @@
 		EA52C5092B68CB4A0012F37B /* DetoxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5082B68CB4A0012F37B /* DetoxViewModel.swift */; };
 		EA52C50B2B68D4550012F37B /* DS-DIGI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EA52C50A2B68D4550012F37B /* DS-DIGI.TTF */; };
 		EA52C50D2B68D6680012F37B /* TimeDecideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C50C2B68D6680012F37B /* TimeDecideView.swift */; };
+		EA52C5102B69105F0012F37B /* TimeTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C50F2B69105F0012F37B /* TimeTapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		EA52C5082B68CB4A0012F37B /* DetoxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetoxViewModel.swift; sourceTree = "<group>"; };
 		EA52C50A2B68D4550012F37B /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
 		EA52C50C2B68D6680012F37B /* TimeDecideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDecideView.swift; sourceTree = "<group>"; };
+		EA52C50F2B69105F0012F37B /* TimeTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,9 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				EA52C45C2B5A55EA0012F37B /* DetoxController.swift */,
-				EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */,
 				EA52C4B12B621E050012F37B /* CreateDetoxView.swift */,
 				EA52C4BD2B6249BD0012F37B /* TimeReminderView.swift */,
+				EA52C50E2B690E5E0012F37B /* CustomCloseButton */,
 				EA52C4BA2B6235090012F37B /* PresentView */,
 			);
 			path = DetoxView;
@@ -309,8 +311,17 @@
 			children = (
 				EA52C4B82B6234C80012F37B /* TimeSettingForDetoxController.swift */,
 				EA52C50C2B68D6680012F37B /* TimeDecideView.swift */,
+				EA52C50F2B69105F0012F37B /* TimeTapView.swift */,
 			);
 			path = PresentView;
+			sourceTree = "<group>";
+		};
+		EA52C50E2B690E5E0012F37B /* CustomCloseButton */ = {
+			isa = PBXGroup;
+			children = (
+				EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */,
+			);
+			path = CustomCloseButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,6 +578,7 @@
 				EA52C4BE2B6249BD0012F37B /* TimeReminderView.swift in Sources */,
 				EA52C4A12B60E43D0012F37B /* MainTabBarController.swift in Sources */,
 				EA52C49B2B5A58880012F37B /* CustomTabBar.swift in Sources */,
+				EA52C5102B69105F0012F37B /* TimeTapView.swift in Sources */,
 				EA52C4C52B67951C0012F37B /* CustomCloseButton.swift in Sources */,
 				EA52C4992B5A586A0012F37B /* Bindable.swift in Sources */,
 				EA52C45D2B5A55EA0012F37B /* DetoxController.swift in Sources */,

@@ -16,8 +16,8 @@ final class TimeDecideView: UIView {
     // MARK: - UI Components
     lazy var alarmImageView: UIImageView = {
         let imageView = UIImageView()
-        let alarmConfig = UIImage.SymbolConfiguration(pointSize: deviceSize.adaptedSize(15), weight: .regular, scale: .medium)
-        let alarmImage = UIImage(systemName: "alarm", withConfiguration: alarmConfig)
+        let alarmConfig = UIImage.SymbolConfiguration(pointSize: deviceSize.adaptedSize(13), weight: .regular, scale: .medium)
+        let alarmImage = UIImage(systemName: "alarm.fill", withConfiguration: alarmConfig)
         imageView.image = alarmImage
         imageView.tintColor = .decisionBorderGray
         return imageView
@@ -33,18 +33,10 @@ final class TimeDecideView: UIView {
         return view
     }()
     
-    private lazy var descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.font = .LINESeedRegular(size: self.deviceSize.adaptedSize(13))
-        label.text = "시간 설정"
-        label.textColor = .decisionBorderGray
-        return label
-    }()
-    
     private lazy var timeDecideLabel: UILabel = {
         let label = UILabel()
         label.font = .DIGI(size: self.deviceSize.adaptedSize(50))
-        label.text = "00:00"
+        label.text = "00:00:00"
         label.textColor = .decisionBlack
         return label
     }()
@@ -71,21 +63,16 @@ extension TimeDecideView: ViewDrawable {
     
     func setAutolayout() {
         
-        [alarmImageView, alarmBorderView, descriptionLabel, timeDecideLabel].forEach { self.addSubview($0) }
+        [alarmImageView, alarmBorderView, timeDecideLabel].forEach { self.addSubview($0) }
 
         alarmImageView.snp.makeConstraints { make in
-            make.leading.equalTo(self.snp.leading).offset(self.deviceSize.adaptedSize(10))
-            make.top.equalTo(self.snp.top).offset(self.deviceSize.adaptedSize(10))
+            make.leading.equalTo(self.snp.leading).offset(self.deviceSize.adaptedSize(13))
+            make.top.equalTo(self.snp.top).offset(self.deviceSize.adaptedSize(13))
         }
 
         alarmBorderView.snp.makeConstraints { make in
             make.center.equalTo(alarmImageView.snp.center)
             make.width.height.equalTo(self.deviceSize.adaptedSize(25))
-        }
-
-        descriptionLabel.snp.makeConstraints { make in
-            make.leading.equalTo(alarmBorderView.snp.trailing).offset(self.deviceSize.adaptedSize(8))
-            make.centerY.equalTo(alarmImageView.snp.centerY)
         }
 
         timeDecideLabel.snp.makeConstraints { make in
