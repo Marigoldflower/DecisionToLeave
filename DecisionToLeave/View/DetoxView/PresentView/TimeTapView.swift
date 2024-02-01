@@ -14,7 +14,7 @@ final class TimeTapView: UIView {
     private let deviceSize = DeviceSizeManager.shared
     
     // MARK: - Data
-    lazy var buttons: [UIButton] = [thirtyMinutes, oneHour, twoHour, threeHour]
+    lazy var buttons: [UIButton] = [oneHour, thirtyMinutes, fiveMinutes, resetButton]
     
     // MARK: - UI Components
     lazy var fingerTapImageView: UIImageView = {
@@ -36,61 +36,61 @@ final class TimeTapView: UIView {
         return view
     }()
     
-    lazy var thirtyMinutes: UIButton = {
-        let button = UIButton()
-        button.layer.borderWidth = deviceSize.adaptedSize(2.0)
-        button.layer.cornerRadius = deviceSize.adaptedSize(10)
-        button.layer.masksToBounds = true
-        button.layer.borderColor = UIColor.decisionBorderGray.cgColor
-        button.setTitle("30 Min", for: .normal)
-        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(16))
-        button.setTitleColor(.decisionBlack, for: .normal)
-        button.backgroundColor = .decisionBackground
-        return button
-    }()
-    
     lazy var oneHour: UIButton = {
         let button = UIButton()
         button.layer.borderWidth = deviceSize.adaptedSize(2.0)
         button.layer.cornerRadius = deviceSize.adaptedSize(10)
         button.layer.masksToBounds = true
         button.layer.borderColor = UIColor.decisionBorderGray.cgColor
-        button.setTitle("1 Hour", for: .normal)
-        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(16))
+        button.setTitle("+ 1 Hour", for: .normal)
+        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(14))
         button.setTitleColor(.decisionBlack, for: .normal)
         button.backgroundColor = .decisionBackground
         return button
     }()
     
-    lazy var twoHour: UIButton = {
+    lazy var thirtyMinutes: UIButton = {
         let button = UIButton()
         button.layer.borderWidth = deviceSize.adaptedSize(2.0)
         button.layer.cornerRadius = deviceSize.adaptedSize(10)
         button.layer.masksToBounds = true
         button.layer.borderColor = UIColor.decisionBorderGray.cgColor
-        button.setTitle("2 Hour", for: .normal)
-        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(16))
+        button.setTitle("+ 30 Min", for: .normal)
+        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(14))
         button.setTitleColor(.decisionBlack, for: .normal)
         button.backgroundColor = .decisionBackground
         return button
     }()
     
-    lazy var threeHour: UIButton = {
+    lazy var fiveMinutes: UIButton = {
         let button = UIButton()
         button.layer.borderWidth = deviceSize.adaptedSize(2.0)
         button.layer.cornerRadius = deviceSize.adaptedSize(10)
         button.layer.masksToBounds = true
         button.layer.borderColor = UIColor.decisionBorderGray.cgColor
-        button.setTitle("3 Hour", for: .normal)
-        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(16))
+        button.setTitle("+ 5 Min", for: .normal)
+        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(14))
         button.setTitleColor(.decisionBlack, for: .normal)
         button.backgroundColor = .decisionBackground
+        return button
+    }()
+    
+    lazy var resetButton: UIButton = {
+        let button = UIButton()
+        button.layer.borderWidth = deviceSize.adaptedSize(2.0)
+        button.layer.cornerRadius = deviceSize.adaptedSize(10)
+        button.layer.masksToBounds = true
+        button.layer.borderColor = UIColor.decisionBorderGray.cgColor
+        button.setTitle("RESET", for: .normal)
+        button.titleLabel?.font = .LINESeedRegular(size: deviceSize.adaptedSize(14))
+        button.setTitleColor(.decisionBlack, for: .normal)
+        button.backgroundColor = .decisionPink
         return button
     }()
     
     // MARK: - Stack
     private lazy var stackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [thirtyMinutes, oneHour, twoHour, threeHour])
+        let stack = UIStackView(arrangedSubviews: [oneHour, thirtyMinutes, fiveMinutes, resetButton])
         stack.axis = .horizontal
         stack.spacing = deviceSize.adaptedSize(12)
         stack.distribution = .fillEqually

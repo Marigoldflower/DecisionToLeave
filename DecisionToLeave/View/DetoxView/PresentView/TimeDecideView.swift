@@ -13,6 +13,19 @@ final class TimeDecideView: UIView {
     // MARK: - Size Manager
     let deviceSize = DeviceSizeManager.shared
     
+    // MARK: - Data
+    var currentTime = 0 {
+        didSet {
+            let hours = currentTime / 3600
+            let minutes = (currentTime % 3600) / 60
+            let seconds = currentTime % 60
+            
+            let time = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+            
+            timeDecideLabel.text = time
+        }
+    }
+    
     // MARK: - UI Components
     lazy var alarmImageView: UIImageView = {
         let imageView = UIImageView()

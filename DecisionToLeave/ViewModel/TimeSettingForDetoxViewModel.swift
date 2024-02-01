@@ -10,24 +10,24 @@ import ReactorKit
 final class TimeSettingForDetoxViewModel: Reactor {
     
     enum Action {
-        case thirtyMinutesTapped
-        case oneHourTapped
-        case twoHourTapped
-        case threeHourTapped
+        case oneHourPlusTapped
+        case thirtyMinutesPlusTapped
+        case fiveMinutesPlusTapped
+        case resetButtonTapped
     }
     
     enum Mutation {
-        case settingThirtyMinutes(Bool)
-        case settingOneHour(Bool)
-        case settingTwoHour(Bool)
-        case settingThreeHour(Bool)
+        case settingOneHourPlus(Bool)
+        case settingThirtyMinutesPlus(Bool)
+        case settingFiveMinutesPlus(Bool)
+        case settingReset(Bool)
     }
 
     struct State {
-        var thirtyMinutesIsSelected: Bool = false
-        var oneHourIsSelected: Bool = false
-        var twoHourIsSelected: Bool = false
-        var threeHourIsSelected: Bool = false
+        var oneHourPlusIsSelected: Bool = false
+        var thirtyMinutesPlusIsSelected: Bool = false
+        var fiveMinutesPlusSelected: Bool = false
+        var resetButtonIsSelected: Bool = false
     }
     
     var initialState: State
@@ -38,28 +38,28 @@ final class TimeSettingForDetoxViewModel: Reactor {
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case .thirtyMinutesTapped:
+        case .oneHourPlusTapped:
             return Observable.concat([
-                Observable.just(Mutation.settingThirtyMinutes(true)),
-                Observable.just(Mutation.settingThirtyMinutes(false))
+                Observable.just(Mutation.settingOneHourPlus(true)),
+                Observable.just(Mutation.settingOneHourPlus(false))
             ])
             
-        case .oneHourTapped:
+        case .thirtyMinutesPlusTapped:
             return Observable.concat([
-                Observable.just(Mutation.settingOneHour(true)),
-                Observable.just(Mutation.settingOneHour(false))
+                Observable.just(Mutation.settingThirtyMinutesPlus(true)),
+                Observable.just(Mutation.settingThirtyMinutesPlus(false))
             ])
             
-        case .twoHourTapped:
+        case .fiveMinutesPlusTapped:
             return Observable.concat([
-                Observable.just(Mutation.settingTwoHour(true)),
-                Observable.just(Mutation.settingTwoHour(false))
+                Observable.just(Mutation.settingFiveMinutesPlus(true)),
+                Observable.just(Mutation.settingFiveMinutesPlus(false))
             ])
             
-        case .threeHourTapped:
+        case .resetButtonTapped:
             return Observable.concat([
-                Observable.just(Mutation.settingThreeHour(true)),
-                Observable.just(Mutation.settingThreeHour(false))
+                Observable.just(Mutation.settingReset(true)),
+                Observable.just(Mutation.settingReset(false))
             ])
         }
     }
@@ -68,14 +68,14 @@ final class TimeSettingForDetoxViewModel: Reactor {
         var newState = state
         
         switch mutation {
-        case .settingThirtyMinutes(let value):
-            newState.thirtyMinutesIsSelected = value
-        case .settingOneHour(let value):
-            newState.oneHourIsSelected = value
-        case .settingTwoHour(let value):
-            newState.twoHourIsSelected = value
-        case .settingThreeHour(let value):
-            newState.threeHourIsSelected = value
+        case .settingOneHourPlus(let value):
+            newState.oneHourPlusIsSelected = value
+        case .settingThirtyMinutesPlus(let value):
+            newState.thirtyMinutesPlusIsSelected = value
+        case .settingFiveMinutesPlus(let value):
+            newState.fiveMinutesPlusSelected = value
+        case .settingReset(let value):
+            newState.resetButtonIsSelected = value
         }
         
         return newState
