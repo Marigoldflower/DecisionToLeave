@@ -42,7 +42,7 @@
 		EA52C50B2B68D4550012F37B /* DS-DIGI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EA52C50A2B68D4550012F37B /* DS-DIGI.TTF */; };
 		EA52C50D2B68D6680012F37B /* TimeDecideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C50C2B68D6680012F37B /* TimeDecideView.swift */; };
 		EA52C5102B69105F0012F37B /* TimeTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C50F2B69105F0012F37B /* TimeTapView.swift */; };
-		EA52C5122B6A1FEC0012F37B /* TimeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5112B6A1FEC0012F37B /* TimeScrollView.swift */; };
+		EA52C5122B6A1FEC0012F37B /* TimeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5112B6A1FEC0012F37B /* TimeAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +108,7 @@
 		EA52C50A2B68D4550012F37B /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
 		EA52C50C2B68D6680012F37B /* TimeDecideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDecideView.swift; sourceTree = "<group>"; };
 		EA52C50F2B69105F0012F37B /* TimeTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTapView.swift; sourceTree = "<group>"; };
-		EA52C5112B6A1FEC0012F37B /* TimeScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScrollView.swift; sourceTree = "<group>"; };
+		EA52C5112B6A1FEC0012F37B /* TimeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,7 +314,7 @@
 				EA52C4B82B6234C80012F37B /* TimeSettingForDetoxController.swift */,
 				EA52C50C2B68D6680012F37B /* TimeDecideView.swift */,
 				EA52C50F2B69105F0012F37B /* TimeTapView.swift */,
-				EA52C5112B6A1FEC0012F37B /* TimeScrollView.swift */,
+				EA52C5112B6A1FEC0012F37B /* TimeAlertView.swift */,
 			);
 			path = PresentView;
 			sourceTree = "<group>";
@@ -586,7 +586,7 @@
 				EA52C4992B5A586A0012F37B /* Bindable.swift in Sources */,
 				EA52C45D2B5A55EA0012F37B /* DetoxController.swift in Sources */,
 				EA52C49F2B60D5D40012F37B /* CustomTabBarViewModel.swift in Sources */,
-				EA52C5122B6A1FEC0012F37B /* TimeScrollView.swift in Sources */,
+				EA52C5122B6A1FEC0012F37B /* TimeAlertView.swift in Sources */,
 				EA52C4A82B613A6D0012F37B /* MyFonts.swift in Sources */,
 				EA52C4B72B622D5A0012F37B /* DeviceVibrateManager.swift in Sources */,
 				EA52C49D2B5A58F20012F37B /* MyColor.swift in Sources */,

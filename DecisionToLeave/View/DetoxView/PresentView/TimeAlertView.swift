@@ -9,22 +9,22 @@ import UIKit
 import SnapKit
 
 
-final class TimeScrollView: UIView {
+final class TimeAlertView: UIView {
     
     // MARK: - Size Manager
     private let deviceSize = DeviceSizeManager.shared
     
     // MARK: - UI Components
-    lazy var scrollImageView: UIImageView = {
+    lazy var alertImageView: UIImageView = {
         let imageView = UIImageView()
         let alarmConfig = UIImage.SymbolConfiguration(pointSize: deviceSize.adaptedSize(13), weight: .regular, scale: .medium)
-        let alarmImage = UIImage(systemName: "scroll.fill", withConfiguration: alarmConfig)
+        let alarmImage = UIImage(systemName: "bell.fill", withConfiguration: alarmConfig)
         imageView.image = alarmImage
         imageView.tintColor = .decisionBorderGray
         return imageView
     }()
     
-    lazy var scrollBorderView: UIView = {
+    lazy var alertBorderView: UIView = {
         let view = UIView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = deviceSize.adaptedSize(2.0)
@@ -44,7 +44,7 @@ final class TimeScrollView: UIView {
     }
 }
 
-extension TimeScrollView: ViewDrawable {
+extension TimeAlertView: ViewDrawable {
     func configureUI() {
         setBackgroundColor()
         setAutolayout()
@@ -55,15 +55,15 @@ extension TimeScrollView: ViewDrawable {
     }
     
     func setAutolayout() {
-        [scrollImageView, scrollBorderView].forEach { self.addSubview($0) }
+        [alertImageView, alertBorderView].forEach { self.addSubview($0) }
         
-        scrollImageView.snp.makeConstraints { make in
+        alertImageView.snp.makeConstraints { make in
             make.leading.equalTo(self.snp.leading).offset(self.deviceSize.adaptedSize(13))
             make.top.equalTo(self.snp.top).offset(self.deviceSize.adaptedSize(13))
         }
         
-        scrollBorderView.snp.makeConstraints { make in
-            make.center.equalTo(scrollImageView.snp.center)
+        alertBorderView.snp.makeConstraints { make in
+            make.center.equalTo(alertImageView.snp.center)
             make.width.height.equalTo(self.deviceSize.adaptedSize(25))
         }
     }

@@ -48,8 +48,8 @@ final class TimeSettingForDetoxController: UIViewController, View {
         return view
     }()
     
-    private lazy var timeScrollView: TimeScrollView = {
-        let view = TimeScrollView()
+    private lazy var timeAlertView: TimeAlertView = {
+        let view = TimeAlertView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
         view.layer.cornerRadius = self.deviceSize.adaptedSize(18)
@@ -196,7 +196,7 @@ extension TimeSettingForDetoxController: ViewDrawable {
     }
     
     func setAutolayout() {
-        [timeDecideView, timeTapView, timeScrollView, createTimeSettingButton].forEach { view.addSubview($0) }
+        [timeDecideView, timeTapView, timeAlertView, createTimeSettingButton].forEach { view.addSubview($0) }
         
         timeDecideView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading).offset(self.deviceSize.adaptedSize(20))
@@ -212,7 +212,7 @@ extension TimeSettingForDetoxController: ViewDrawable {
             make.height.equalTo(self.deviceSize.adaptedSize(100))
         }
         
-        timeScrollView.snp.makeConstraints { make in
+        timeAlertView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading).offset(self.deviceSize.adaptedSize(20))
             make.trailing.equalTo(view.snp.trailing).offset(self.deviceSize.adaptedSize(-20))
             make.top.equalTo(timeTapView.snp.bottom).offset(self.deviceSize.adaptedSize(30))
@@ -242,6 +242,6 @@ extension TimeSettingForDetoxController: ViewDrawable {
     }
     
     private func setScrollBorderViewBelowToScrollImage() {
-        timeScrollView.insertSubview(timeScrollView.scrollBorderView, belowSubview: timeScrollView.scrollImageView)
+        timeAlertView.insertSubview(timeAlertView.alertBorderView, belowSubview: timeAlertView.alertImageView)
     }
 }
