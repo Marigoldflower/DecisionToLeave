@@ -43,6 +43,8 @@
 		EA52C50D2B68D6680012F37B /* TimeDecideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C50C2B68D6680012F37B /* TimeDecideView.swift */; };
 		EA52C5102B69105F0012F37B /* TimeTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C50F2B69105F0012F37B /* TimeTapView.swift */; };
 		EA52C5122B6A1FEC0012F37B /* TimeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5112B6A1FEC0012F37B /* TimeAlertView.swift */; };
+		EA52C5552B70F0CA0012F37B /* SaveOrNotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5542B70F0CA0012F37B /* SaveOrNotController.swift */; };
+		EA52C5572B70F1370012F37B /* SaveOrNotAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52C5562B70F1370012F37B /* SaveOrNotAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		EA52C50C2B68D6680012F37B /* TimeDecideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDecideView.swift; sourceTree = "<group>"; };
 		EA52C50F2B69105F0012F37B /* TimeTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTapView.swift; sourceTree = "<group>"; };
 		EA52C5112B6A1FEC0012F37B /* TimeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAlertView.swift; sourceTree = "<group>"; };
+		EA52C5542B70F0CA0012F37B /* SaveOrNotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOrNotController.swift; sourceTree = "<group>"; };
+		EA52C5562B70F1370012F37B /* SaveOrNotAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOrNotAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,10 +315,8 @@
 		EA52C4BA2B6235090012F37B /* PresentView */ = {
 			isa = PBXGroup;
 			children = (
-				EA52C4B82B6234C80012F37B /* TimeSettingForDetoxController.swift */,
-				EA52C50C2B68D6680012F37B /* TimeDecideView.swift */,
-				EA52C50F2B69105F0012F37B /* TimeTapView.swift */,
-				EA52C5112B6A1FEC0012F37B /* TimeAlertView.swift */,
+				EA52C5532B70F0810012F37B /* SaveOrNotPresentView */,
+				EA52C5522B70F0530012F37B /* TimeSettingPresentView */,
 			);
 			path = PresentView;
 			sourceTree = "<group>";
@@ -325,6 +327,26 @@
 				EA52C4C42B67951C0012F37B /* CustomCloseButton.swift */,
 			);
 			path = CustomCloseButton;
+			sourceTree = "<group>";
+		};
+		EA52C5522B70F0530012F37B /* TimeSettingPresentView */ = {
+			isa = PBXGroup;
+			children = (
+				EA52C4B82B6234C80012F37B /* TimeSettingForDetoxController.swift */,
+				EA52C50C2B68D6680012F37B /* TimeDecideView.swift */,
+				EA52C50F2B69105F0012F37B /* TimeTapView.swift */,
+				EA52C5112B6A1FEC0012F37B /* TimeAlertView.swift */,
+			);
+			path = TimeSettingPresentView;
+			sourceTree = "<group>";
+		};
+		EA52C5532B70F0810012F37B /* SaveOrNotPresentView */ = {
+			isa = PBXGroup;
+			children = (
+				EA52C5542B70F0CA0012F37B /* SaveOrNotController.swift */,
+				EA52C5562B70F1370012F37B /* SaveOrNotAlertView.swift */,
+			);
+			path = SaveOrNotPresentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,6 +596,7 @@
 				EA52C4B22B621E050012F37B /* CreateDetoxView.swift in Sources */,
 				EA52C50D2B68D6680012F37B /* TimeDecideView.swift in Sources */,
 				EA52C4892B5A56120012F37B /* SettingController.swift in Sources */,
+				EA52C5572B70F1370012F37B /* SaveOrNotAlertView.swift in Sources */,
 				EA52C4A42B61207D0012F37B /* DeviceSizeMananger.swift in Sources */,
 				EA52C4BC2B623C0D0012F37B /* CustomNavigationBar.swift in Sources */,
 				EA52C5072B68CA900012F37B /* TimeSettingForDetoxViewModel.swift in Sources */,
@@ -587,6 +610,7 @@
 				EA52C45D2B5A55EA0012F37B /* DetoxController.swift in Sources */,
 				EA52C49F2B60D5D40012F37B /* CustomTabBarViewModel.swift in Sources */,
 				EA52C5122B6A1FEC0012F37B /* TimeAlertView.swift in Sources */,
+				EA52C5552B70F0CA0012F37B /* SaveOrNotController.swift in Sources */,
 				EA52C4A82B613A6D0012F37B /* MyFonts.swift in Sources */,
 				EA52C4B72B622D5A0012F37B /* DeviceVibrateManager.swift in Sources */,
 				EA52C49D2B5A58F20012F37B /* MyColor.swift in Sources */,

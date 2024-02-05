@@ -101,6 +101,9 @@ final class DetoxController: UIViewController{
     
     @objc func customCloseButtonTapped() {
         vibrateGenerate()
+        // 1. TimeDecideView 시간을 나타내는 Text에 00:00:00이 적혀있지 않을 경우
+        // 2. 알람 관련 설정을 한 번이라도 건드렸을 경우
+        // 변경 사항을 저장하지 않고 나가시겠습니까? 라는 문구를 넣은 창을 띄운ㄷ
         self.dismiss(animated: true)
     }
     

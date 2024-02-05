@@ -12,9 +12,6 @@ import RxCocoa
 
 final class TimeSettingForDetoxController: UIViewController, View {
     
-    // MARK: - Vibrate Manager
-    private let deviceVibrate = DeviceVibrateManager.shared
-    
     // MARK: - Size Manager
     private let deviceSize = DeviceSizeManager.shared
 
