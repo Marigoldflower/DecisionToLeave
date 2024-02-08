@@ -26,8 +26,11 @@ final class TimeSettingForDetoxController: UIViewController, View {
     // MARK: - ViewModel
     private let timeSettingForDetoxViewModel = TimeSettingForDetoxViewModel()
     
+    // MARK: - ButtonTapCount
+    var buttonTapCount = 0
+    
     // MARK: - UI Components
-    private lazy var timeDecideView: TimeDecideView = {
+    lazy var timeDecideView: TimeDecideView = {
         let view = TimeDecideView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
@@ -36,7 +39,7 @@ final class TimeSettingForDetoxController: UIViewController, View {
         return view
     }()
     
-    private lazy var timeTapView: TimeTapView = {
+    lazy var timeTapView: TimeTapView = {
         let view = TimeTapView()
         view.layer.borderColor = UIColor.decisionBorderGray.cgColor
         view.layer.borderWidth = self.deviceSize.adaptedSize(2.0)
@@ -108,6 +111,7 @@ extension TimeSettingForDetoxController: Bindable {
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] oneHourPlusIsSelected in
                 if oneHourPlusIsSelected {
+                    self?.buttonTapCount += 1
                     self?.timeDecideView.currentTime += 60 * 60
                     self?.setSelectedButton(of: (self?.timeTapView.oneHour)!)
                 }
@@ -119,6 +123,7 @@ extension TimeSettingForDetoxController: Bindable {
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] thirtyMinutesPlusIsSelected in
                 if thirtyMinutesPlusIsSelected {
+                    self?.buttonTapCount += 1
                     self?.timeDecideView.currentTime += 30 * 60
                     self?.setSelectedButton(of: (self?.timeTapView.thirtyMinutes)!)
                 }
@@ -130,6 +135,7 @@ extension TimeSettingForDetoxController: Bindable {
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] fiveMinutesPlusSelected in
                 if fiveMinutesPlusSelected {
+                    self?.buttonTapCount += 1
                     self?.timeDecideView.currentTime += 5 * 60
                     self?.setSelectedButton(of: (self?.timeTapView.fiveMinutes)!)
                 }
@@ -141,6 +147,7 @@ extension TimeSettingForDetoxController: Bindable {
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] resetButtonIsSelected in
                 if resetButtonIsSelected {
+                    self?.buttonTapCount = 0
                     self?.timeDecideView.currentTime = 0
                     self?.setSelectedButton(of: (self?.timeTapView.resetButton)!)
                 }

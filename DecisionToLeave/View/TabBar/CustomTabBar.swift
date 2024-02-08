@@ -81,7 +81,7 @@ extension CustomTabBar: Bindable {
     func bindState(_ reactor: Reactor) {
         reactor.state
             .map { $0.detoxControllerPresented }
-            .subscribe(onNext: { [weak self] detoxTabIsTapped in
+            .subscribe(onNext: { detoxTabIsTapped in
                 if detoxTabIsTapped {
                     NotificationCenter.default.post(name: NSNotification.Name("ChangeTab"), object: nil, userInfo: ["tab": 0])
                     vibrateGenerate()
@@ -91,7 +91,7 @@ extension CustomTabBar: Bindable {
         
         reactor.state
             .map { $0.rankingControllerPresented }
-            .subscribe(onNext: { [weak self] rankingTabIsTapped in
+            .subscribe(onNext: { rankingTabIsTapped in
                 if rankingTabIsTapped {
                     NotificationCenter.default.post(name: NSNotification.Name("ChangeTab"), object: nil, userInfo: ["tab": 1])
                     vibrateGenerate()

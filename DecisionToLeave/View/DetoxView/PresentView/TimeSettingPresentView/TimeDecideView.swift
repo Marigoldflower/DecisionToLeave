@@ -46,7 +46,7 @@ final class TimeDecideView: UIView {
         return view
     }()
     
-    private lazy var timeDecideLabel: UILabel = {
+    lazy var timeDecideLabel: UILabel = {
         let label = UILabel()
         label.font = .DIGI(size: self.deviceSize.adaptedSize(50))
         label.text = "00:00:00"

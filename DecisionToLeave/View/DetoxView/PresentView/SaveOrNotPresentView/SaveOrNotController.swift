@@ -27,7 +27,6 @@ final class SaveOrNotController: UIViewController {
         super.viewDidLoad()
         configureUI()
     }
-  
 }
 
 extension SaveOrNotController: ViewDrawable {

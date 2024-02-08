@@ -13,9 +13,6 @@ final class TimeTapView: UIView {
     // MARK: - Size Manager
     private let deviceSize = DeviceSizeManager.shared
     
-    // MARK: - Data
-    lazy var buttons: [UIButton] = [oneHour, thirtyMinutes, fiveMinutes, resetButton]
-    
     // MARK: - UI Components
     lazy var fingerTapImageView: UIImageView = {
         let imageView = UIImageView()
@@ -119,16 +116,6 @@ extension TimeTapView: ViewDrawable {
     
     func setAutolayout() {
         [stackView].forEach { self.addSubview($0) }
-
-//        fingerTapImageView.snp.makeConstraints { make in
-//            make.leading.equalTo(self.snp.leading).offset(self.deviceSize.adaptedSize(13))
-//            make.top.equalTo(self.snp.top).offset(self.deviceSize.adaptedSize(13))
-//        }
-//
-//        fingerTapBorderView.snp.makeConstraints { make in
-//            make.center.equalTo(fingerTapImageView.snp.center)
-//            make.width.height.equalTo(self.deviceSize.adaptedSize(25))
-//        }
         
         stackView.snp.makeConstraints { make in
             make.center.equalTo(self.snp.center)

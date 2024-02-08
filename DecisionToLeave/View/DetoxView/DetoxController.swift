@@ -16,6 +16,7 @@ final class DetoxController: UIViewController{
     lazy var createDetoxViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(createDetoxViewTapped))
     
     // MARK: - PresentView
+    private var saveOrNotController: SaveOrNotController! = nil
     private var timeSettingForDetoxController: TimeSettingForDetoxController! = nil
     
     // MARK: - UI Components
@@ -101,10 +102,19 @@ final class DetoxController: UIViewController{
     
     @objc func customCloseButtonTapped() {
         vibrateGenerate()
-        // 1. TimeDecideView 시간을 나타내는 Text에 00:00:00이 적혀있지 않을 경우
+        // 1. TimeTapView에 있는 버튼이 한 번이라도 눌렸을 경우
         // 2. 알람 관련 설정을 한 번이라도 건드렸을 경우
-        // 변경 사항을 저장하지 않고 나가시겠습니까? 라는 문구를 넣은 창을 띄운ㄷ
-        self.dismiss(animated: true)
+        // "변경 사항을 저장하지 않고 나가시겠습니까?" 라는 문구를 넣은 창을 띄운다
+        if timeSettingForDetoxController.buttonTapCount != 0 {
+            saveOrNotController = SaveOrNotController()
+//            saveOrNotController.modalPresentationStyle = .fullScreen
+            saveOrNotController.modalTransitionStyle = .crossDissolve
+            timeSettingForDetoxController.present(saveOrNotController, animated: true)
+            
+        } else {
+            self.dismiss(animated: true)
+        }
+        
     }
     
     private func setNavigationController(appearance: UINavigationBarAppearance) {
